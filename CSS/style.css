@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: none !important;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    overflow-x: hidden;
+}
+p{
+    text-indent: 20px;
+    line-height: 35px;
+}
+.button0{
+    border: none;
+    outline: none;
+    background-color: transparent !important;
+    cursor: pointer;
+}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* font-family: "Sedan", serif; */
+@import url('https://fonts.googleapis.com/css2?family=Sedan&display=swap');
+
+/* font-family: "Playfair Display", serif; */
+
+@keyframes girar {
+    0% { transform: rotate(0deg); } /* Início: sem rotação */
+    100% { transform: rotate(185deg); } /* Fim: rotação completa */
+}
+
+@keyframes pulse {
+0% {
+    transform: scale(0.9); /* Estado inicial */
+    duration: 2s; /* Duração da animação */
+    animation-timing-function: ease-in-out; /* Suaviza a animação */
+    animation-iteration-count: inherit; /* Repete a animação indefinidamente */
+}
+100% {
+    transform: scale(1.0); /* Estado final (ligeiramente maior) */
+}
+}
+
+p{
+    font-family: 'roboto', sans-serif;
+    font-size: 18px;
+}
+a{
+    text-decoration: none !important;
+    list-style: none;
+    color: #f1e472 !important;
+}
+body{
+}
+nav{
+    background-color: rgb(251, 238, 193);
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+    width: 150px;
+    position: fixed;
+}
+nav .logo-bottom img{
+    height: 40px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    right: 0;
+    animation: girar 3s infinite alternate-reverse; /* Aplica a animação */
+    justify-content: space-evenly;
+}
+
+.nav-link{
+    font-weight: 700 !important;
+    color: #020202 !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 12px !important;
+}
+.nav-link:hover{
+    color: rgb(224, 178, 41) !important;
+    box-shadow: inset 0 -1px 0 0 rgb(224, 178, 41);
+    animation: pulse 1s 1;
+    cursor: pointer;
+
+}
+main{
+    background-color: rgba(66, 65, 65, 0.811);
+    width: calc(100% );
+    position: relative;
+}
+main .img-girassol img{
+    background-position: fixed;
+    position: absolute;
+    margin-top: -100px;
+    height: 700px;
+    width: 100%;
+    object-fit: contain;
+    z-index: -1!important;
+    animation: girar 20s infinite alternate; /* Aplica a animação */
+    filter: blur(0.5px);
+}
+main .profile-text{
+    animation: pulse 1s 1 alternate;
+    background-image: linear-gradient(to left top, rgb(255, 187, 0), rgba(236, 185, 83, 0.927), rgba(253, 211, 105, 0.8));
+    backdrop-filter: blur(10px)
+}
+main .profile-text h1{
+    font-family: 'Sedan', serif;
+    font-weight: 700;
+    font-size: 50px;
+    color: rgb(0, 0, 0);
+}
+main .profile-text h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+#abordagem{
+
+    background-color: rgba(47, 47, 47, 0.818);
+    position: relative !important;
+}
+#abordagem h3{
+    margin-top: 0px;
+    top: 0;
+    margin-bottom: 50px;
+    font-weight: 1000;
+    font-size: 30px;
+}
+#abordagem .img{
+    background-image: url(../imagens/fundo-da-ardosia-com-margarida-e-espaco-para-mensagens.jpg);
+    filter: blur(10px);
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-attachment: fixed;
+    z-index: -2;
+}
+.btn{
+    animation: pulse 1s infinite alternate-reverse;
+}
+@media (max-width: 992px){
+    nav{
+        width: 100% !important;
+        position: fixed !important;
+        z-index: 11;
+
+        background-image: linear-gradient(to left top, rgb(255, 187, 0), rgba(236, 185, 83, 0.927), rgba(253, 211, 105, 0.8));
+        text-shadow: none !important;
+    }
+}
+@media (max-width: 768px){
+    main .profile-text{
+        height: 100% !important;
+        margin: 0 auto !important;
+        margin-top: 100px !important;
+        margin-left:  none !important;
+    }
+
+    main .cn-1{
+        margin-left: 0px !important;
+        width: 100% !important;
+    }
+
+
+}
+main .cn-1{
+    background-color: #ff550008;
+    margin-right: 0px !important;
+    min-height: 790px;
+}
+@media (min-width: 768px){
+    main .cn-1{
+        width: calc(100% - 150px) ;
+    }
+    
+}
+#abordagem .text-whats{
+    cursor: pointer;
+    color: #baba65 !important;
+}
+.gif img{
+    height: 200px !important;
+    width: 200px !important;
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+    animation: pulse 2s infinite alternate;
+}
+iframe{
+    margin-top: 100px;
+}
